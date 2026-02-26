@@ -1,0 +1,365 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Download" description="Download FitMac for free - CLI and GUI versions available for macOS">
+  <Header />
+  
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Download FitMac
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400">
+            Free and open source. Choose the version that works best for you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Options -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- CLI Version -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border-2 border-gray-200 dark:border-gray-700">
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="w-14 h-14 bg-gray-200 dark:bg-gray-700 rounded-xl flex items-center justify-center">
+                <svg class="w-7 h-7 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Command Line</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">For power users and automation</p>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <span class="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-400 text-sm font-medium rounded-full">
+                Stable Release
+              </span>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                <code class="text-sm text-gray-100">
+                  <div class="text-gray-400 mb-2"># Install via Homebrew</div>
+                  <div class="text-green-400">$ brew install fitmac</div>
+                </code>
+              </div>
+
+              <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                <code class="text-sm text-gray-100">
+                  <div class="text-gray-400 mb-2"># Or build from source</div>
+                  <div class="text-green-400">$ git clone https://github.com/yingounet/FitMac.git</div>
+                  <div class="text-green-400">$ cd FitMac</div>
+                  <div class="text-green-400">$ swift build -c release</div>
+                  <div class="text-green-400">$ cp .build/release/fitmac /usr/local/bin/</div>
+                </code>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+              <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>macOS 11 Big Sur or later</span>
+              </div>
+              <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mt-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Xcode 15+ for building from source</span>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a href="/docs" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                View CLI documentation
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- GUI Version -->
+          <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 border-2 border-blue-200 dark:border-blue-800">
+            <div class="flex items-center space-x-4 mb-6">
+              <div class="w-14 h-14 bg-blue-200 dark:bg-blue-800 rounded-xl flex items-center justify-center">
+                <svg class="w-7 h-7 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Desktop App</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Beautiful native interface</p>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <span class="inline-block px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-400 text-sm font-medium rounded-full">
+                Coming Soon
+              </span>
+            </div>
+
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              The SwiftUI desktop application is currently in development. It will provide a beautiful, 
+              intuitive interface with all the same features as the CLI.
+            </p>
+
+            <div class="bg-white dark:bg-gray-800 rounded-xl p-4 mb-6">
+              <div class="flex items-center space-x-3 text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Notify me when it's ready</span>
+              </div>
+              <p class="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                Follow the GitHub repository for updates.
+              </p>
+            </div>
+
+            <div class="space-y-3">
+              <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>macOS 13 Ventura or later</span>
+              </div>
+              <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Native SwiftUI interface</span>
+              </div>
+              <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Same powerful features as CLI</span>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <a href="https://github.com/yingounet/FitMac" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                Track progress on GitHub
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7l-10 10M17 7V3m0 4H3m10 10h4m-4 0v4m0-4L3 17" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          Installation Guide
+        </h2>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Step 1 -->
+          <div class="mb-12">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                1
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Install via Homebrew (Recommended)</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  The easiest way to install FitMac is using Homebrew, the popular macOS package manager.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ brew install fitmac</div>
+                  </code>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 mt-4">
+                  Don't have Homebrew? Install it from <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">brew.sh</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="mb-12">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                2
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Build from Source</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  You can also build FitMac from source. This requires Xcode Command Line Tools.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Clone the repository</div>
+                    <div class="text-green-400">$ git clone https://github.com/yingounet/FitMac.git</div>
+                    <div class="text-green-400">$ cd FitMac</div>
+                    <div class="text-gray-400 mt-4"># Build the release version</div>
+                    <div class="text-green-400">$ swift build -c release</div>
+                    <div class="text-gray-400 mt-4"># Copy to your PATH</div>
+                    <div class="text-green-400">$ cp .build/release/fitmac /usr/local/bin/</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="mb-12">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                3
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Grant Full Disk Access</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  For FitMac to scan and clean all files, it needs Full Disk Access permission.
+                </p>
+                <ol class="space-y-2 text-gray-600 dark:text-gray-400">
+                  <li class="flex items-start space-x-2">
+                    <span class="font-semibold text-gray-900 dark:text-white">1.</span>
+                    <span>Open System Settings</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <span class="font-semibold text-gray-900 dark:text-white">2.</span>
+                    <span>Go to Privacy & Security → Full Disk Access</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <span class="font-semibold text-gray-900 dark:text-white">3.</span>
+                    <span>Add Terminal (for CLI) or FitMac (for GUI)</span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                4
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Verify Installation</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Run the following command to verify FitMac is installed correctly:
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ fitmac --help</div>
+                    <div class="text-gray-400 mt-2">Make Your Mac Fit Again - A safe, open-source Mac cleaner</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            System Requirements
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                CLI Version
+              </h3>
+              <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  macOS 11 Big Sur or later
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Xcode 15+ (for building from source)
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Full Disk Access (for complete scanning)
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                GUI Version
+              </h3>
+              <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  macOS 13 Ventura or later
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Coming soon
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Full Disk Access (for complete scanning)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-500">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Have Questions?
+        </h2>
+        <p class="text-blue-100 text-lg mb-8">
+          Check out our documentation for detailed usage instructions.
+        </p>
+        <a href="/docs" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+          View Documentation
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

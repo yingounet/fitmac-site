@@ -1,0 +1,425 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Documentation" description="Learn how to use FitMac - comprehensive guides for CLI commands and features">
+  <Header />
+  
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Documentation
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400">
+            Everything you need to know about using FitMac.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Quick Start</h2>
+          
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-8">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Installation</h3>
+            <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+              <code class="text-sm text-gray-100">
+                <div class="text-green-400">$ brew install fitmac</div>
+              </code>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Or build from source: <code class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">git clone https://github.com/yingounet/FitMac.git && cd FitMac && swift build -c release</code>
+            </p>
+          </div>
+
+          <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">First Command</h3>
+            <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+              <code class="text-sm text-gray-100">
+                <div class="text-green-400">$ fitmac status</div>
+                <div class="text-gray-400 mt-2">Disk: 512 GB total, 256 GB used, 256 GB available</div>
+              </code>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              This shows your current disk usage status.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLI Commands -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            CLI Commands Reference
+          </h2>
+
+          <!-- Status Command -->
+          <div class="mb-12">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">fitmac status</h3>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 text-sm rounded-full">Basic</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Show disk usage status including total, used, and available space.
+              </p>
+              <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                <code class="text-sm text-gray-100">
+                  <div class="text-green-400">$ fitmac status</div>
+                </code>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cache Command -->
+          <div class="mb-12">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">fitmac cache</h3>
+                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-400 text-sm rounded-full">Popular</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Scan and clean system, application, browser, and developer caches.
+              </p>
+              
+              <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Examples:</h4>
+              <div class="space-y-3">
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Scan all caches</div>
+                    <div class="text-green-400">$ fitmac cache --scan</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Scan specific category</div>
+                    <div class="text-green-400">$ fitmac cache --scan --category browser</div>
+                    <div class="text-green-400">$ fitmac cache --scan --category dev</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Clean caches (dry-run by default)</div>
+                    <div class="text-green-400">$ fitmac cache --clean</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Actually delete files</div>
+                    <div class="text-green-400">$ fitmac cache --clean --no-dry-run</div>
+                  </code>
+                </div>
+              </div>
+
+              <h4 class="font-semibold text-gray-900 dark:text-white mt-6 mb-3">Options:</h4>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th class="text-left py-2 text-gray-900 dark:text-white font-semibold">Option</th>
+                      <th class="text-left py-2 text-gray-900 dark:text-white font-semibold">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-600 dark:text-gray-400">
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--scan</td>
+                      <td class="py-2">Scan cache files without deleting</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--clean</td>
+                      <td class="py-2">Clean cache files</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--category</td>
+                      <td class="py-2">Specific category: system, app, browser, dev</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--no-dry-run</td>
+                      <td class="py-2">Actually delete files (default is dry-run)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Files Command -->
+          <div class="mb-12">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">fitmac large</h3>
+                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-400 text-sm rounded-full">Popular</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Find large files taking up disk space.
+              </p>
+              
+              <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Examples:</h4>
+              <div class="space-y-3">
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Find files larger than 100MB in home directory</div>
+                    <div class="text-green-400">$ fitmac large</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Find files larger than 500MB in Downloads</div>
+                    <div class="text-green-400">$ fitmac large --path ~/Downloads --min 500MB</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Limit results to 10 files</div>
+                    <div class="text-green-400">$ fitmac large --limit 10</div>
+                  </code>
+                </div>
+              </div>
+
+              <h4 class="font-semibold text-gray-900 dark:text-white mt-6 mb-3">Options:</h4>
+              <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                  <thead>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <th class="text-left py-2 text-gray-900 dark:text-white font-semibold">Option</th>
+                      <th class="text-left py-2 text-gray-900 dark:text-white font-semibold">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-600 dark:text-gray-400">
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--path</td>
+                      <td class="py-2">Directory to search (default: home)</td>
+                    </tr>
+                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--min</td>
+                      <td class="py-2">Minimum file size (e.g., 100MB, 1GB)</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 font-mono text-blue-600 dark:text-blue-400">--limit</td>
+                      <td class="py-2">Maximum number of results</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Uninstall Command -->
+          <div class="mb-12">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">fitmac uninstall</h3>
+                <span class="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-400 text-sm rounded-full">Popular</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Find and remove app leftovers completely.
+              </p>
+              
+              <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Examples:</h4>
+              <div class="space-y-3">
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Search for app leftovers</div>
+                    <div class="text-green-400">$ fitmac uninstall "AppName"</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Clean leftovers (dry-run by default)</div>
+                    <div class="text-green-400">$ fitmac uninstall "AppName" --clean</div>
+                  </code>
+                </div>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-gray-400"># Actually delete</div>
+                    <div class="text-green-400">$ fitmac uninstall "AppName" --clean --no-dry-run</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trash Command -->
+          <div class="mb-12">
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">fitmac trash</h3>
+                <span class="px-3 py-1 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-400 text-sm rounded-full">Basic</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Empty all trash bins safely.
+              </p>
+              <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                <code class="text-sm text-gray-100">
+                  <div class="text-green-400">$ fitmac trash --empty</div>
+                </code>
+              </div>
+            </div>
+          </div>
+
+          <!-- Log Command -->
+          <div>
+            <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-sm">
+              <div class="flex items-start justify-between mb-4">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">fitmac log</h3>
+                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-400 text-sm rounded-full">Utility</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                View history of past cleanup operations.
+              </p>
+              <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                <code class="text-sm text-gray-100">
+                  <div class="text-green-400">$ fitmac log</div>
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Features -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">Safety Features</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Dry-run Mode
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                All cleaning operations run in dry-run mode by default. This means FitMac will show you what <em>would</em> be deleted without actually deleting anything. Use <code class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-xs">--no-dry-run</code> to actually delete files.
+              </p>
+            </div>
+
+            <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+                </svg>
+                Trash Recovery
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                When you actually delete files, they go to Trash first. This gives you a chance to recover files if you change your mind. Empty Trash separately when you're sure.
+              </p>
+            </div>
+
+            <div class="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                Transparent Paths
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                FitMac shows you exactly which files will be deleted. All file paths are displayed clearly before any operation. No hidden or mysterious deletions.
+              </p>
+            </div>
+
+            <div class="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                No Network
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                FitMac works completely offline. Your file data never leaves your Mac. The only network connection is for optional update checks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Is FitMac really free?</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Yes! FitMac is completely free and open source under the MIT License. No hidden costs, no premium features, no subscriptions.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Is it safe to use?</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Yes. FitMac uses dry-run mode by default, sends files to Trash first, and shows you exactly what will be deleted. All operations are reversible.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Why do I need Full Disk Access?</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                macOS restricts access to certain system and user files. Full Disk Access allows FitMac to scan and clean all locations thoroughly. Without it, some files may be missed.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">How do I uninstall FitMac?</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Simply remove the binary: <code class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm">sudo rm /usr/local/bin/fitmac</code>. If installed via Homebrew: <code class="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-sm">brew uninstall fitmac</code>.
+              </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">When will the GUI be ready?</h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                The SwiftUI GUI is currently in development. Follow the GitHub repository for updates on its progress.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-500">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Need More Help?
+        </h2>
+        <p class="text-blue-100 text-lg mb-8">
+          Open an issue on GitHub or contribute to the project.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://github.com/yingounet/FitMac/issues" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+            Open an Issue
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 7l-10 10M17 7V3m0 4H3m10 10h4m-4 0v4m0-4L3 17" />
+            </svg>
+          </a>
+          <a href="/contributing" class="inline-flex items-center px-8 py-4 bg-blue-700/50 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors">
+            Contributing Guide
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

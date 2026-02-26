@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Features" description="Explore all FitMac features - Cache Cleaner, Large Files Finder, App Uninstaller, and more powerful Mac cleaning tools">
+  <Header />
+  
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            All the Tools You Need
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400">
+            12 powerful features to clean, optimize, and maintain your Mac. All free, all open source.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Features (MVP) -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Core Features</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <!-- Disk Status -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Disk Status</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Monitor your disk usage in real-time with a beautiful visual gauge. See total, used, and available space at a glance.
+                </p>
+                <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ fitmac status</div>
+                    <div class="text-gray-400 mt-2">Total: 512 GB | Used: 256 GB | Available: 256 GB</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cache Cleaner -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Cache Cleaner</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Safely scan and clean caches from system, applications, browsers, and developer tools. Supports dry-run mode.
+                </p>
+                <ul class="text-sm text-gray-600 dark:text-gray-400 mb-4 space-y-1">
+                  <li>• System cache</li>
+                  <li>• Application cache</li>
+                  <li>• Browser cache (Safari, Chrome, Firefox)</li>
+                  <li>• Developer cache (Xcode, npm, etc.)</li>
+                </ul>
+                <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ fitmac cache --scan</div>
+                    <div class="text-green-400">$ fitmac cache --clean --category browser</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Large Files Finder -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Large Files Finder</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Quickly locate large files taking up valuable disk space. Search by size threshold and limit results.
+                </p>
+                <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ fitmac large --min 500MB</div>
+                    <div class="text-green-400">$ fitmac large --path ~/Downloads --limit 10</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- App Uninstaller -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-lg transition-shadow">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">App Uninstaller</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Completely remove applications and all their leftover files including preferences, caches, and support files.
+                </p>
+                <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ fitmac uninstall "AppName"</div>
+                    <div class="text-green-400">$ fitmac uninstall "AppName" --clean</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Tools -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Additional Cleaning Tools</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <!-- System Junk -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">System Junk</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Clean system temporary files and logs.</p>
+          </div>
+
+          <!-- Trash -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Trash</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Empty all trash bins safely.</p>
+          </div>
+
+          <!-- Language Files -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.148" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Language Files</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Remove unused localization files.</p>
+          </div>
+
+          <!-- iTunes -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-pink-100 dark:bg-pink-900/50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-pink-600 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">iTunes</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Clean old iTunes backups and caches.</p>
+          </div>
+
+          <!-- Mail Attachments -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Mail Attachments</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Remove downloaded email attachments.</p>
+          </div>
+
+          <!-- History/Logs -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">History</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">View past cleanup operations logs.</p>
+          </div>
+
+          <!-- Permissions -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/50 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-cyan-600 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Permissions</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Manage Full Disk Access settings.</p>
+          </div>
+
+          <!-- More Coming -->
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-md transition-shadow border-2 border-dashed border-gray-200 dark:border-gray-700">
+            <div class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">More Coming</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">Stay tuned for additional features!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Features -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-12 text-center">Built-in Safety</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Dry-run Mode</h3>
+            <p class="text-gray-600 dark:text-gray-400">Preview all changes before they happen. Know exactly what will be deleted.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Trash Recovery</h3>
+            <p class="text-gray-600 dark:text-gray-400">All deletions go to Trash first. Recover files if you change your mind.</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Transparent</h3>
+            <p class="text-gray-600 dark:text-gray-400">All file paths shown clearly. No hidden operations. Open source code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-500">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Ready to Try FitMac?
+        </h2>
+        <p class="text-blue-100 text-lg mb-8">
+          Download now and start cleaning your Mac safely.
+        </p>
+        <a href="/download" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Download Free
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

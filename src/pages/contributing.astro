@@ -1,0 +1,352 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contributing" description="Learn how to contribute to FitMac - the open-source Mac cleaning tool">
+  <Header />
+  
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Contributing to FitMac
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-400">
+            Help us make FitMac better for everyone. All contributions are welcome!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 mb-12">
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+              FitMac is an open-source project licensed under the MIT License. We believe in the power of community-driven development and welcome contributions from developers of all skill levels.
+            </p>
+          </div>
+
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            Ways to Contribute
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Write Code</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Fix bugs, implement new features, improve performance, or add new cleaning modules.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Write Documentation</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Improve docs, add examples, fix typos, or translate content to other languages.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Report Bugs</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Found a bug? Open an issue with detailed steps to reproduce it.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+              <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">Suggest Features</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Have an idea? Share it! We love hearing about new features that would help users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Setup -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            Development Setup
+          </h2>
+
+          <div class="space-y-8">
+            <!-- Step 1 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                1
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Fork the Repository</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Click the "Fork" button on GitHub to create your own copy of the project.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                2
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Clone Your Fork</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Download your fork to your local machine.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ git clone https://github.com/YOUR_USERNAME/FitMac.git</div>
+                    <div class="text-green-400">$ cd FitMac</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                3
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Install Dependencies</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  FitMac uses Swift Package Manager for dependencies.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ swift package resolve</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                4
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Build the Project</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Build and run tests to ensure everything is working.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ swift build</div>
+                    <div class="text-green-400">$ swift test</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                5
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Run the CLI</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                  Test your changes by running the CLI.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+                  <code class="text-sm text-gray-100">
+                    <div class="text-green-400">$ swift run fitmac status</div>
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Structure -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            Project Structure
+          </h2>
+
+          <div class="bg-gray-900 rounded-xl p-6 overflow-x-auto">
+            <code class="text-sm text-gray-100">
+              <pre class="text-gray-300">FitMac/
+├── Sources/
+│   ├── FitMacCore/       # Core library (shared by CLI and GUI)
+│   │   ├── Cleaners/     # Scanner and cleaner logic
+│   │   ├── Models/       # Data models
+│   │   └── Utils/        # Utilities
+│   ├── FitMacCLI/        # Command-line interface
+│   └── FitMacApp/        # SwiftUI application
+├── Tests/
+│   └── FitMacCoreTests/  # Unit tests
+├── Package.swift
+└── README.md</pre>
+            </code>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">FitMacCore</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                The core library containing all scanning and cleaning logic. Shared by both CLI and GUI.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">FitMacCLI</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                Command-line interface built with Swift Argument Parser.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-2">FitMacApp</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">
+                SwiftUI desktop application with native macOS interface.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pull Request Guidelines -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            Pull Request Guidelines
+          </h2>
+
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Before Submitting</h3>
+              <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Run <code class="bg-gray-200 dark:bg-gray-700 px-2 py-0.5 rounded text-sm">swift test</code> to ensure all tests pass
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Format your code consistently with the existing style
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Add tests for new features
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Update documentation if needed
+                </li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3">Commit Messages</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                Follow these conventions for commit messages:
+              </p>
+              <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                <li>• Use present tense ("Add feature" not "Added feature")</li>
+                <li>• Use imperative mood ("Move cursor" not "Moves cursor")</li>
+                <li>• Limit the first line to 72 characters or less</li>
+                <li>• Reference issues and pull requests liberally after the first line</li>
+              </ul>
+            </div>
+
+            <div class="bg-white dark:bg-gray-900 rounded-xl p-6">
+              <h3 class="font-semibold text-gray-900 dark:text-white mb-3">PR Description</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">
+                When creating a pull request, please include:
+              </p>
+              <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                <li>• A clear description of what your PR does</li>
+                <li>• Any related issues (use "Fixes #123" syntax)</li>
+                <li>• Screenshots or examples for UI changes</li>
+                <li>• Testing instructions if applicable</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Code of Conduct -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+            Code of Conduct
+          </h2>
+
+          <div class="bg-purple-50 dark:bg-purple-900/20 rounded-2xl p-8">
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              We are committed to providing a welcoming and inspiring community for all. Please be respectful and constructive in your interactions.
+            </p>
+            <p class="text-gray-700 dark:text-gray-300">
+              By participating in this project, you agree to abide by our Code of Conduct. Be kind, be patient, and remember that open source is a collaborative effort.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-blue-500">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Ready to Contribute?
+        </h2>
+        <p class="text-blue-100 text-lg mb-8">
+          Join our community and help make FitMac better!
+        </p>
+        <a href="https://github.com/yingounet/FitMac" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
