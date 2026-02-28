@@ -49,14 +49,7 @@ import Footer from '../components/Footer.astro';
             <div class="space-y-4">
               <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
                 <code class="text-sm text-gray-100">
-                  <div class="text-gray-400 mb-2"># Install via Homebrew</div>
-                  <div class="text-green-400">$ brew install fitmac</div>
-                </code>
-              </div>
-
-              <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
-                <code class="text-sm text-gray-100">
-                  <div class="text-gray-400 mb-2"># Or build from source</div>
+                  <div class="text-gray-400 mb-2"># Build from source</div>
                   <div class="text-green-400">$ git clone https://github.com/yingounet/FitMac.git</div>
                   <div class="text-green-400">$ cd FitMac</div>
                   <div class="text-green-400">$ swift build -c release</div>
@@ -76,7 +69,13 @@ import Footer from '../components/Footer.astro';
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Xcode 15+ for building from source</span>
+                <span>Xcode 15+ and Swift 5.9+</span>
+              </div>
+              <div class="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mt-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Disk Access for complete scanning</span>
               </div>
             </div>
 
@@ -161,6 +160,173 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Features -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+          Features (v0.5.2)
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 text-center mb-12">
+          All core features are complete and ready to use. MVP complete.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <!-- Cache Cleaning -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Cache Cleaning</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              System, app, browser, and development tool caches. Supports Safari, Chrome, Firefox, Edge, Xcode, npm, Homebrew, and more.
+            </p>
+          </div>
+
+          <!-- Trash Management -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Trash Management</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Scan and empty trash from all disks. Selective empty for specific volumes.
+            </p>
+          </div>
+
+          <!-- Language Files -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.148" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Language Files</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Remove unnecessary language packs and localization files. Keep only your current language.
+            </p>
+          </div>
+
+          <!-- System Junk -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-yellow-600 dark:text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">System Junk</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Temporary files, broken downloads, old document versions, .DS_Store files, and Spotlight index残留.
+            </p>
+          </div>
+
+          <!-- iOS Backup -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">iOS Backup</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Clean old iOS device backups, podcasts downloads, and iTunes leftovers.
+            </p>
+          </div>
+
+          <!-- App Uninstall -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">App Uninstall</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Complete app removal with残留 scanning. Cleans Preferences, Containers, Caches, and more.
+            </p>
+          </div>
+
+          <!-- Large Files -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-pink-100 dark:bg-pink-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-pink-600 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Large Files</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Find and manage large files by size or date. Sort, filter, and delete safely.
+            </p>
+          </div>
+
+          <!-- Duplicates -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H2a2 2 0 01-2-2V5a2 2 0 012-2h6" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Duplicates Finder</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Find duplicate files by hash. Preview and select which copies to keep.
+            </p>
+          </div>
+
+          <!-- Login Items -->
+          <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-orange-600 dark:text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Login Items</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm">
+              Manage startup items, LaunchAgents, and LaunchDaemons. Enable, disable, or remove.
+            </p>
+          </div>
+        </div>
+
+        <!-- Safety Features -->
+        <div class="mt-16 bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 border-2 border-blue-200 dark:border-blue-800">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+            Safety First
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Dry-run Mode</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Preview all changes before deletion. Default enabled.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Trash Deletion</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">All files moved to Trash, never permanently deleted.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-3">
+              <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Operation Logs</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">Full history of all cleanup operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Installation Guide -->
     <section class="py-20 bg-gray-50 dark:bg-gray-800">
       <div class="container mx-auto px-4">
@@ -176,32 +342,9 @@ import Footer from '../components/Footer.astro';
                 1
               </div>
               <div class="flex-1">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Install via Homebrew (Recommended)</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">
-                  The easiest way to install FitMac is using Homebrew, the popular macOS package manager.
-                </p>
-                <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
-                  <code class="text-sm text-gray-100">
-                    <div class="text-green-400">$ brew install fitmac</div>
-                  </code>
-                </div>
-                <p class="text-gray-600 dark:text-gray-400 mt-4">
-                  Don't have Homebrew? Install it from <a href="https://brew.sh" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">brew.sh</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="mb-12">
-            <div class="flex items-start space-x-4">
-              <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
-                2
-              </div>
-              <div class="flex-1">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Build from Source</h3>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">
-                  You can also build FitMac from source. This requires Xcode Command Line Tools.
+                  FitMac requires manual compilation. You need Xcode Command Line Tools and Swift 5.9+.
                 </p>
                 <div class="bg-gray-900 rounded-xl p-4 overflow-x-auto">
                   <code class="text-sm text-gray-100">
@@ -218,11 +361,11 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
 
-          <!-- Step 3 -->
+          <!-- Step 2 -->
           <div class="mb-12">
             <div class="flex items-start space-x-4">
               <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
-                3
+                2
               </div>
               <div class="flex-1">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Grant Full Disk Access</h3>
@@ -247,11 +390,11 @@ import Footer from '../components/Footer.astro';
             </div>
           </div>
 
-          <!-- Step 4 -->
+          <!-- Step 3 -->
           <div>
             <div class="flex items-start space-x-4">
               <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">
-                4
+                3
               </div>
               <div class="flex-1">
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Verify Installation</h3>
@@ -298,13 +441,19 @@ import Footer from '../components/Footer.astro';
                   <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  Xcode 15+ (for building from source)
+                  Xcode 15+ and Swift 5.9+
                 </li>
                 <li class="flex items-center">
                   <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
                   Full Disk Access (for complete scanning)
+                </li>
+                <li class="flex items-center">
+                  <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Manual compilation required
                 </li>
               </ul>
             </div>
@@ -327,7 +476,7 @@ import Footer from '../components/Footer.astro';
                   <svg class="w-4 h-4 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  Coming soon
+                  In development (SwiftUI)
                 </li>
                 <li class="flex items-center">
                   <svg class="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
